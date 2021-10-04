@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 26</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(bisque, green);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        h3 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Geolocation</h1>
+    </header>
+    <h2>My Location</h2>
+    <button onclick="findLocation()">Find Location</button>
+    <h3 id="myLocation"></h3>
+
+</body>
+<script>
+    function findLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(ShowPos);
+        }
+        else {
+            document.getElementById("myLocation").innerText =
+                "location not found"
+        }
+        function ShowPos(pos) {
+            document.getElementById("myLocation").innerText =
+                "Latitude: " + pos.coords.latitude + " Longitude "
+                + pos.coords.longitude;
+        }
+    }
+
+</script>
+
+</html>

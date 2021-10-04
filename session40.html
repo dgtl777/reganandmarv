@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 40</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(yellow, green);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        img {
+            width: 250px;
+            border: 10px solid burlywood;
+            display: none;
+        }
+
+        #score {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="score">Score: 0</h1>
+        <u>
+            <h1>Riddle Master</h1>
+        </u>
+    </header>
+    <h3>1. What has to be broken before you can use it?</h3>
+    <input type="text" name="" id="a1">
+    <button onclick="q1()">Submit</button>
+    <button onclick="h1()">Hint</button><br><br>
+    <img id="i1"
+        src="https://i.guim.co.uk/img/media/db9a96e1251a41a215ada849407983cedadc2fbb/0_252_2574_1545/master/2574.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=c9f8a7a53581da509ffbc0d9c33b9aa1"
+        alt="">
+    <h3>Result</h3>
+    <h4 id="r1"></h4>
+
+    <h3>2. I’m tall when I’m young, and I’m short when I’m old. What am I?</h3>
+    <input type="text" name="" id="a2">
+    <button onclick="q2()">Submit</button>
+    <button onclick="h2()">Hint</button><br><br>
+    <img id="i2"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Waxinelicht_-_aangestoken_%28cropped%29.JPG/1200px-Waxinelicht_-_aangestoken_%28cropped%29.JPG"
+        alt="">
+    <h3>Result</h3>
+    <h4 id="r2"></h4>
+
+</body>
+<script>
+    var score = 0;
+    function q1() {
+        var a1 = document.getElementById("a1").value;
+        if (a1.toUpperCase() == "EGG") {
+            document.getElementById("r1").innerText =
+                "Correct Answer"
+            score = score + 1;
+            document.getElementById("score").innerText =
+                "Score: " + score;
+        }
+        else {
+            document.getElementById("r1").innerText =
+                "Wrong Answer"
+        }
+    }
+    function h1() {
+        document.getElementById("i1").style.display =
+            "inline-block"
+    }
+    function q2() {
+        var a2 = document.getElementById("a2").value;
+        if (a2.toUpperCase() == "CANDLE") {
+            document.getElementById("r2").innerText =
+                "Correct Answer"
+            score = score + 1;
+            document.getElementById("score").innerText =
+                "Score: " + score;
+        }
+        else {
+            document.getElementById("r2").innerText =
+                "Wrong Answer"
+        }
+    }
+    function h2() {
+        document.getElementById("i2").style.display =
+            "inline-block"
+    }
+</script>
+
+</html>

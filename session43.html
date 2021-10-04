@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 43</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image:
+                linear-gradient(yellow, purple);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: purple;
+        }
+
+        p::first-line {
+            color: red;
+            font-size: 24px;
+        }
+
+        p::first-letter {
+            color: blue;
+            font-size: 48px;
+        }
+
+        #before::before {
+            content: "Today ";
+            font-size: 42px;
+            color: yellow;
+        }
+
+        #after::after {
+            content: " Monday";
+            color: yellow;
+            font-size: 42px;
+        }
+
+        ::marker {
+            font-size: 48px;
+            color: yellow;
+        }
+
+        :checked {
+            width: 50px;
+            height: 50px;
+        }
+
+        ::selection {
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <u>
+            <h1>Pseudo Elements</h1>
+        </u>
+    </header>
+    <h2>first-line</h2>
+    <p>This is the first line<br>this is the second line
+        <br>this is the third line
+    </p>
+    <h2>first-letter</h2>
+    <p>This is the use of first letter</p>
+    <h2>before</h2>
+    <p id="before">is our 43rd session</p>
+    <h2>after</h2>
+    <p id="after">Today is</p>
+    <h2>checked</h2>
+    <input type="radio" name="" id="">
+    <input type="checkbox" name="" id="">
+    <h2>marker</h2>
+    <ul>
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+    </ul>
+    <h2>selection</h2>
+    <p>select this paragraph</p>
+
+
+</body>
+
+</html>
